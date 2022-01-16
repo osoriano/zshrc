@@ -49,6 +49,8 @@ export EDITOR="$VISUAL"
 # (zsh-vi-mode plugin) Disable the cursor style feature.
 # Does not work well across vi, zsh, tmux, iterm2
 ZVM_CURSOR_STYLE_ENABLED=false
+# (zsh-vi-mode plugin) Always start with insert mode for each command line
+ZVM_LINE_INIT_MODE="${ZVM_MODE_INSERT}"
 
 # fd uses .gitignore files to filter file results
 export FZF_DEFAULT_COMMAND='fd'

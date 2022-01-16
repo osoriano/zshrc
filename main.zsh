@@ -1,6 +1,10 @@
 # Files on the custom/ directory will be automatically loaded by the init
 # script, in alphabetical order.
 
+# Send unmatched globs (e.g. *foo* or HEAD^) to the command, instead of erroring out
+# See https://github.com/ohmyzsh/ohmyzsh/issues/449
+setopt NO_NOMATCH
+
 alias l='ls -lAhF'
 alias ll='ls -lAhF'
 alias la='ls -lAhF'

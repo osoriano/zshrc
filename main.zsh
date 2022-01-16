@@ -33,6 +33,9 @@ alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 alias grs="git rebase --skip"
 
+# Search hidden files, but obey ignored files
+alias ag='ag --hidden'
+
 alias standby='while true; do echo -n . && sleep 15; done'
 alias chompifeof="perl -pi -e 'chomp if eof'"
 

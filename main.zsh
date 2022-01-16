@@ -46,6 +46,10 @@ alias chompifeof="perl -pi -e 'chomp if eof'"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# (zsh-vi-mode plugin) Disable the cursor style feature.
+# Does not work well across vi, zsh, tmux, iterm2
+ZVM_CURSOR_STYLE_ENABLED=false
+
 # fd uses .gitignore files to filter file results
 export FZF_DEFAULT_COMMAND='fd'
 

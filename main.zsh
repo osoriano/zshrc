@@ -98,6 +98,10 @@ jqf() {
     rm -rf "${jqf_dir}"
 }
 
+function mdcd() {
+  mkdir -p $@ && cd ${@:$#}
+}
+
 # When using history expansion commands such as "!$",
 # run the command when using <enter>. Do not just expand it.
 # See https://superuser.com/questions/1276224/oh-my-zsh-history-expansion-on-space-or-tab-but-not-enter

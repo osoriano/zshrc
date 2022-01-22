@@ -43,6 +43,8 @@ alias ag='ag --hidden'
 alias standby='while true; do echo -n . && sleep 15; done'
 alias chompifeof="perl -pi -e 'chomp if eof'"
 
+alias rl='realpath --canonicalize-existing'
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
 

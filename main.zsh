@@ -37,6 +37,9 @@ alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 alias grs="git rebase --skip"
 
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+
 # Search hidden files, but obey ignored files
 alias ag='ag --hidden'
 

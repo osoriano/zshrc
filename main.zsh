@@ -68,7 +68,6 @@ kns() {
 }
 
 # Get ip addresses of docker container
-# unalias dip
 dip() {
     docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }

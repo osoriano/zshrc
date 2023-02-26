@@ -113,7 +113,7 @@ jqf() {
     rm -rf "${jqf_dir}"
 }
 
-function mdcd() {
+mdcd() {
   mkdir -p $@ && cd ${@:$#}
 }
 

@@ -118,6 +118,15 @@ function mdcd() {
   mkdir -p $@ && cd ${@:$#}
 }
 
+# Convert leetcode problem name to file name, without the extension
+# Example:
+# > lcfname "1421. NPV Queries"
+# 1421_npv_queries
+#
+lcfname() {
+  echo "$@" | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr '-' '_' | tr -d '.'
+}
+
 # When using history expansion commands such as "!$",
 # run the command when using <enter>. Do not just expand it.
 # See https://superuser.com/questions/1276224/oh-my-zsh-history-expansion-on-space-or-tab-but-not-enter

@@ -64,7 +64,7 @@ export FZF_DEFAULT_COMMAND='fd'
 # Set the namespace of the current k8s context
 kns() {
     local ns="${1}"
-    kubectl config set-context $(kubectl config current-context) --namespace="${ns}"
+    kubectl config set-context --current --namespace="${ns}"
 }
 
 # Get ip addresses of docker container

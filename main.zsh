@@ -18,6 +18,7 @@ alias pscp="scp -o PreferredAuthentications=keyboard-interactive,password -o Pub
 alias v="vim -O"
 alias vi="vim -O"
 alias vim="vim -O"
+alias im="vim -O"
 
 alias h="history | less +G"
 
@@ -39,6 +40,7 @@ alias grs="git rebase --skip"
 
 alias dcu='docker compose up'
 alias dcd='docker compose down'
+alias dcp='docker compose ps'
 
 # Search hidden files, but obey ignored files
 alias ag='ag --hidden'
@@ -126,6 +128,20 @@ lcfname() {
   echo "$@" | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr '-' '_' | tr -d '.'
 }
 
+# Reset the SSH auth sock to the latest
+# Assumes SSH auth socks are in /tmp/ssh-*
+ras() {
+  local sock_prefix="/tmp/ssh-"
+  local latest_sock
+
+  if ! latest_sock="$(ls -t "${sock_prefix}"*/* | head -n 1)" || [[ -z "${latest_sock}" ]]; then
+    echo "Did not find auth sock in ${sock_prefix}*" 1>&2
+    return 1
+  fi
+
+  export SSH_AUTH_SOCK="${latest_sock}"
+}
+
 # When using history expansion commands such as "!$",
 # run the command when using <enter>. Do not just expand it.
 # See https://superuser.com/questions/1276224/oh-my-zsh-history-expansion-on-space-or-tab-but-not-enter
@@ -133,6 +149,8 @@ unsetopt HIST_VERIFY
 
 # Some tools (e.g. bazel) are installed here
 export PATH="$PATH:$HOME/bin"
+# Some tools (e.g. shfmt) are installed here
+export PATH="$PATH:$HOME/go/bin"
 
 # From nvm git install instructions
 # See https://github.com/nvm-sh/nvm#git-install

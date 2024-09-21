@@ -152,6 +152,9 @@ export PATH="$PATH:$HOME/bin"
 # Some tools (e.g. shfmt) are installed here
 export PATH="$PATH:$HOME/go/bin"
 
+# Include go installation
+export PATH="/opt/go/bin:${PATH}"
+
 # From nvm git install instructions
 # See https://github.com/nvm-sh/nvm#git-install
 export NVM_DIR="$HOME/gh/nvm-sh/nvm"

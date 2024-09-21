@@ -19,6 +19,7 @@ alias v="vim -O"
 alias vi="vim -O"
 alias vim="vim -O"
 alias im="vim -O"
+alias vc="vim -O --clean"
 
 alias h="history | less +G"
 

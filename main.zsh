@@ -5,6 +5,9 @@
 # See https://github.com/ohmyzsh/ohmyzsh/issues/449
 setopt NO_NOMATCH
 
+# Avoid querying user when using rm command
+setopt rmstarsilent
+
 alias l='ls -lAhF'
 alias ll='ls -lAhF'
 alias la='ls -lAhF'
@@ -42,6 +45,8 @@ alias grs="git rebase --skip"
 alias dcu='docker compose up'
 alias dcd='docker compose down'
 alias dcp='docker compose ps'
+
+alias fpstree='pstree -glptsSu'
 
 # Search hidden files, but obey ignored files
 alias ag='ag --hidden'

@@ -56,6 +56,18 @@ alias chompifeof="perl -pi -e 'chomp if eof'"
 
 alias rl='realpath --canonicalize-existing'
 
+alias k=kubectl
+alias kg='kubectl get --sort-by=.metadata.creationTimestamp'
+alias kgp='kubectl get pods --sort-by=.metadata.creationTimestamp'
+alias kgpr='kubectl get pods --sort-by=.metadata.creationTimestamp --field-selector=status.phase==Running'
+
+alias b64='base64'
+alias b64d='base64 --decode'
+
+alias tre='tree'
+
+alias tp='telepresence'
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
 

@@ -175,6 +175,9 @@ export PATH="$PATH:$HOME/go/bin"
 # Include go installation
 export PATH="/opt/go/bin:${PATH}"
 
+# Include krew installation
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # From nvm git install instructions
 # See https://github.com/nvm-sh/nvm#git-install
 export NVM_DIR="$HOME/gh/nvm-sh/nvm"

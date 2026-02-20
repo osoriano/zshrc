@@ -153,6 +153,8 @@ ras() {
 # See https://superuser.com/questions/1276224/oh-my-zsh-history-expansion-on-space-or-tab-but-not-enter
 unsetopt HIST_VERIFY
 
+# Some tools (e.g. claude) are installed here
+export PATH="$HOME/.local/bin:$PATH"
 # Some tools (e.g. bazel) are installed here
 export PATH="$PATH:$HOME/bin"
 # Some tools (e.g. shfmt) are installed here
